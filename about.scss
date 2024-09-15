@@ -1,0 +1,132 @@
+// Переменные
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$highlight-color: #f9f871;
+$text-color: black;
+$padding: 20px;
+$transition-time: 0.3s;
+
+// Миксин для центрирования элементов по flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Миксин для адаптивности (мобильные устройства)
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Миксин для добавления transition
+@mixin transition($property, $duration: $transition-time, $ease: ease-in-out) {
+  transition: $property $duration $ease;
+}
+
+// Базовые стили для страницы
+.page-about {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+// Шапка страницы
+.header {
+  background-color: $secondary-color;
+  padding: $padding;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    @include flex-center; // Применение миксина для центрирования элементов
+
+    gap: 10px;
+  }
+
+  &__menu__link {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      color: blue;
+      @include transition(color); // Применение миксина для анимации перехода цвета
+    }
+  }
+}
+
+// Основной контент
+.content {
+  padding: $padding;
+
+  &__about {
+    font-size: 2rem;
+
+
+    &__tilte {
+      margin-bottom: 10px;
+    }
+
+    &__image {
+      @include flex-center; // Применение миксина для центрирования изображения
+      text-align: center;
+      margin-top: $padding;
+
+      &__img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &__caption {
+        font-size: 0.9rem;
+        color: gray;
+      }
+    }
+
+    &__text {
+      margin-bottom: $padding;
+    }
+  }
+  &__project {
+    &__title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+
+      &__item {
+        padding: 5px 0;
+      }
+    }
+  }
+
+}
+
+// Футер
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $padding;
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__mail, &__phone {
+    color: $highlight-color;
+
+    &:hover {
+      text-decoration: underline;
+      @include transition(text-decoration); // Переход для подчеркивания
+    }
+  }
+}

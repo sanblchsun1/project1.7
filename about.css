@@ -1,0 +1,67 @@
+.page-about {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: black; }
+
+.header {
+  background-color: #f4f4f4;
+  padding: 20px; }
+  .header__title {
+    margin: 0; }
+  .header__menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; }
+  .header__menu__link {
+    text-decoration: none;
+    color: black; }
+    .header__menu__link:hover {
+      color: blue;
+      transition: color 0.3s ease-in-out; }
+
+.content {
+  padding: 20px; }
+  .content__about {
+    font-size: 2rem; }
+    .content__about__tilte {
+      margin-bottom: 10px; }
+    .content__about__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px; }
+      .content__about__image__img {
+        max-width: 100%;
+        height: auto; }
+      .content__about__image__caption {
+        font-size: 0.9rem;
+        color: gray; }
+    .content__about__text {
+      margin-bottom: 20px; }
+  .content__project__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px; }
+  .content__project__list {
+    list-style: none;
+    padding: 0; }
+    .content__project__list__item {
+      padding: 5px 0; }
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px; }
+  .footer__text {
+    margin-bottom: 10px; }
+  .footer__mail, .footer__phone {
+    color: #f9f871; }
+    .footer__mail:hover, .footer__phone:hover {
+      text-decoration: underline;
+      transition: text-decoration 0.3s ease-in-out; }
+
+/*# sourceMappingURL=about.css.map */
